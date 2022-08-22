@@ -26,7 +26,7 @@ SECRET_KEY = '!y++mpfeot3ejw8b6zvfusf^kg&%o@o)h-&#ub@^3-q*my4#ey'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'instaconnectstest1.herokuapp.com']
 
 
 # Application definition
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'crispy_forms',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
