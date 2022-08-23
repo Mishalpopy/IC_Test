@@ -13,7 +13,9 @@ def register(request):
             username = forms.cleaned_data.get('username')
             first_name = forms.cleaned_data.get('first_name')
             last_name = forms.cleaned_data.get('last_name')
+            instagram_link = forms.cleaned_data.get('instagram_link')
             email = forms.cleaned_data.get('email')
+            phone_link = forms.cleaned_data.get('phone_link')
             password = forms.cleaned_data.get('forms')
             if User.objects.filter(email=email).exists():
                 raise ValidationError("Email exists")
@@ -52,3 +54,6 @@ def profile(request):
 def logout_user(request):
     logout(request) 
     return redirect('login')
+
+def test(request):
+    return render(request, 'test.html')
